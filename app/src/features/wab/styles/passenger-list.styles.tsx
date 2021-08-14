@@ -15,4 +15,22 @@ export const styles = StyleSheet.create({
     screenMainContainer: {
         flex: 1,
     },
+    nameInputStyles: {
+        width: 270,
+        marginHorizontal: 5,
+        paddingTop: 5,
+    },
+    massInputStyles: {
+        width: 100,
+        marginHorizontal: 5,
+        paddingTop: 5,
+    },
+    soulContainerStyles: {
+        flexDirection: 'row',
+    },
+    fuelInputStyles: {
+        width: 185,
+        marginHorizontal: 5,
+        paddingTop: 5,
+    },
 });

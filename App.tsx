@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { createContext } from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { NavigationTabs } from './app/src/infrastructure/navigation/navigation-tabs';
+import { souls } from './app/src/infrastructure/contexts/souls';
 
 import { Provider as PaperProvider } from 'react-native-paper';
 import { theme } from './app/src/infrastructure/theme';
-
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 
 import {
     useFonts as useOswald,
@@ -19,15 +17,19 @@ export default function App() {
     const [oswaldLoaded] = useOswald({ Oswald_400Regular });
     const [latoLoaded] = useLato({ Lato_400Regular });
 
+    const SoulsContext = createContext(souls);
+
     if (!oswaldLoaded || !latoLoaded) {
         return null;
     } else {
         return (
-            <PaperProvider theme={theme}>
-                <NavigationContainer>
-                    <NavigationTabs />
-                </NavigationContainer>
-            </PaperProvider>
+            <SoulsContext.Provider value={souls}>
+                <PaperProvider theme={theme}>
+                    <NavigationContainer>
+                        <NavigationTabs />
+                    </NavigationContainer>
+                </PaperProvider>
+            </SoulsContext.Provider>
         );
     }
 }
