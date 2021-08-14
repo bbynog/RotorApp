@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { InputData } from '../../../components/textinput/text-input-wab.component';
-import { View, ImageBackground, Dimensions } from 'react-native';
+import { View, ImageBackground, Dimensions, Text } from 'react-native';
 import { styles } from '../styles/passenger-list.styles';
 
 import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
+import { ButtonInputData } from '../../../components/textinput/button-input-data.component';
 
 export const PassengerListModule = () => {
     const tabBarHeight = useBottomTabBarHeight();
@@ -18,7 +19,7 @@ export const PassengerListModule = () => {
                 }}
             >
                 <View style={styles.moduleContainer}>
-                    <InputData
+                    {/* <InputData
                         label="Pilot's Name"
                         placeholder="Type pilot's name"
                         massType="kgs"
@@ -49,7 +50,8 @@ export const PassengerListModule = () => {
                         placeholder="Type passenger 3's name"
                         massType="lts"
                         onlyMass={true}
-                    />
+                    /> */}
+                    <ButtonInputData header="Pilot" massType="kgs" />
                 </View>
             </ImageBackground>
         </>

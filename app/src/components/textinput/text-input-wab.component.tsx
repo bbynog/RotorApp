@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import { styles } from './text-input-wab.styles';
-import { Spacer } from '../spacer/spacer.component';
 
 type InputDataProps = {
     label: string;

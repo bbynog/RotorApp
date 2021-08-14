@@ -8,7 +8,7 @@ export const theme = {
     ...DefaultTheme,
     colors: {
         ...DefaultTheme.colors,
-        colors,
+        ...colors,
     },
     space,
     lineHeights,
