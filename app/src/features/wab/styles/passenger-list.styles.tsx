@@ -1,6 +1,9 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
 export const styles = StyleSheet.create({
+    screenMainContainer: {
+        flex: 1,
+    },
     moduleContainer: {
         flex: 1,
         justifyContent: 'center',
