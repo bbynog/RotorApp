@@ -1,9 +1,9 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 
 export const styles = StyleSheet.create({
     moduleContainer: {
         flex: 1,
+        justifyContent: 'center',
     },
     backGroundStyle: {
         position: 'absolute',
@@ -12,25 +12,36 @@ export const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height,
     },
-    screenMainContainer: {
+    frontRowStyles: {
         flex: 1,
+        flexDirection: 'row',
+        paddingLeft: 93,
+        paddingTop: 30,
+        marginBottom: 110,
+        paddingBottom: 20,
     },
-    nameInputStyles: {
-        width: 270,
-        marginHorizontal: 5,
-        paddingTop: 5,
+    backRowStyles: {
+        flex: 1,
+        flexDirection: 'row',
+        paddingLeft: 93,
+        marginBottom: 110,
+        paddingBottom: 25,
     },
-    massInputStyles: {
-        width: 100,
-        marginHorizontal: 5,
-        paddingTop: 5,
+    tanksRowStyles: {
+        flex: 1,
+        flexDirection: 'row',
+        paddingLeft: 73,
+        marginBottom: 120,
+        paddingBottom: 25,
     },
     soulContainerStyles: {
         flexDirection: 'row',
+        flex: 1,
+        flexGrow: 0.36,
     },
-    fuelInputStyles: {
-        width: 185,
-        marginHorizontal: 5,
-        paddingTop: 5,
+    tankContainerStyles: {
+        flexDirection: 'row',
+        flex: 1,
+        flexGrow: 0.47,
     },
 });

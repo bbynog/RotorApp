@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, TouchableOpacity } from 'react-native';
 import { Text, Modal, Portal, Provider } from 'react-native-paper';
-import { styles } from './text-input-wab.styles';
+import { styles } from './soulDataInput.styles';
 
 type ButtonInputDataProps = {
     header: string;
@@ -32,9 +32,9 @@ export const ButtonInputData = ({ header, massType }: ButtonInputDataProps) => {
             </Portal>
             <TouchableOpacity onPress={showModal}>
                 <View style={styles.viewDataContainer}>
-                    <Text style={styles.viewHeaderTextStyles}>{header}</Text>
-                    <Text style={styles.viewTextStyles}>{name}</Text>
-                    <Text style={styles.viewTextStyles}>
+                    <Text style={styles.headerTextStyles}>{header}</Text>
+                    <Text style={styles.textNameStyles}>{name}</Text>
+                    <Text style={styles.textMassStyles}>
                         {mass} {massType}
                     </Text>
                 </View>
